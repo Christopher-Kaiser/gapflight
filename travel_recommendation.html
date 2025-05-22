@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GapFlight - Trip Assistant</title>
+        <link rel="stylesheet" href="travel_recommendation.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <nav>
+            <h1>GapFlight</h1>
+            <ul>
+                <li><a href="./travel_recommendation.html">Home</a></li>
+                <li><a href="./about_us.html">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+
+            <div class="search-area">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+                <button class="circle-btn search-btn" onclick="performSearch()">
+                    <i class="fas fa-magnifying-glass"></i>
+                </button>
+                <button class="circle-btn reset-btn" onclick="resetResults()">
+                    <i class="fas fa-rotate-left"></i>
+                </button>
+            </div>
+        </nav>
+
+        <script src="./travel_recommendation.js"></script>
+    </body>
+</html>

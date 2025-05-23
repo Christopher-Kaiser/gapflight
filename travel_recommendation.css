@@ -103,10 +103,10 @@ nav ul li a:hover {
 }
 
 .hero {
-    background-image: url('newyork-skyline.jpg'); /* Replace with real cityscape image */
+    background-image: url('https://cdn.pixabay.com/photo/2017/07/18/17/32/munich-2516492_1280.jpg');
     background-size: cover;
     background-position: center;
-    height: 600px; /* Adjusted to fit the image's full height */
+    height: 627px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +127,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 60px; /* Increased to match the large text in the image */
+    font-size: 40px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     position: relative;
     z-index: 2;

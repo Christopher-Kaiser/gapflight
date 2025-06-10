@@ -12,6 +12,8 @@ nav {
     padding: 12px 24px;
     flex-wrap: wrap;
     gap: 12px;
+    position: relative;
+    z-index: 2;
 }
 
 nav h1 {
@@ -103,6 +105,7 @@ nav ul li a:hover {
 }
 
 .hero {
+    position: relative;
     background-image: url('https://cdn.pixabay.com/photo/2017/07/18/17/32/munich-2516492_1280.jpg');
     background-size: cover;
     background-position: center;
@@ -128,8 +131,7 @@ nav ul li a:hover {
 
 .hero-content {
     max-width: 500px;
-  }
-  
+}
 
 .hero h1 {
     font-size: 55px;
@@ -144,11 +146,31 @@ nav ul li a:hover {
 .hero p {
     font-size: 18px;
     margin: 10px auto;
+    color: rgb(230, 230, 230);
     text-align: left;
+    position: relative;
     z-index: 2;
     line-height: 1.6;
     margin-bottom: 20px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.booking {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    margin-top: 15px;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.booking:hover {
+    background-color: #d5d5d5;
 }
 
 .section {
@@ -205,7 +227,7 @@ nav ul li a:hover {
     font-size: 15px;
 }
 
-.btn {
+.button {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 25px;
@@ -217,6 +239,47 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.button:hover {
     background-color: #005fa3;
+}
+
+.social-sidebar {
+    position: absolute;
+    top: 61.8%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.social-sidebar::before {
+    content: '';
+    position: absolute;
+    top: -210px; /* Extend upward above the icons */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 170px;
+    background-color: white;
+    z-index: 11;
+    margin-left: 9px;
+}
+
+.social-sidebar a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-sidebar a:hover {
+    color: #d5d5d5;
+}
+
+.social-sidebar i {
+    display: block;
 }

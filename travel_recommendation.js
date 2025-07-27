@@ -29,16 +29,21 @@ function performSearch() {
             });
 
             // Search countries and their cities
-            data.countries.forEach(country => {
-                if (matches(country.name)) {
-                    countries.push(country);
-                }
-                country.cities.forEach(city => {
-                    if (matches(city.name)) {
-                        cities.push({country: country.name, ...city});
+            // --- FIX: If query is 'country' or 'countries', show all countries ---
+            if (normalized === 'country') {
+                countries = data.countries.slice();
+            } else {
+                data.countries.forEach(country => {
+                    if (matches(country.name)) {
+                        countries.push(country);
                     }
+                    country.cities.forEach(city => {
+                        if (matches(city.name)) {
+                            cities.push({country: country.name, ...city});
+                        }
+                    });
                 });
-            });
+            }
 
             // Helper to render a card
             function renderCard(item, type) {

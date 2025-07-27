@@ -1,0 +1,317 @@
+/* Custom styles for About Us layout enhancements */
+.about-hero {
+    height: 627px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    padding: 30px 0 5px 0;
+    color: #fff;
+}
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.38);
+    z-index: 1;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(24, 38, 52, 0.68);
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    backdrop-filter: blur(2px);
+    height: auto;
+}
+
+.about-title {
+    font-size: 40px !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    margin: 0 0 10px 4px !important;
+    text-align: left !important;
+    letter-spacing: 1px !important;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7) !important;
+    line-height: 1.1 !important;
+}
+
+.about-mission {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0;
+    background: rgba(24, 38, 52, 0.38);
+    border-radius: 10px;
+    padding: 15px 18px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e3eaf3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+    flex-shrink: 0;
+}
+
+.about-highlight {
+    font-weight: bold;
+    color: #ffeb3b;
+    background: rgba(0,0,0,0.13);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.about-note {
+    color: #b2f7ef;
+    display: block;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.team-section {
+    width: 100%;
+    max-width: 1150px;
+    background: rgba(24, 38, 52, 0.58);
+    border-radius: 14px;
+    padding: 12px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 0;
+}
+
+.team-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #b2f7ef;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.28);
+    line-height: 1.1;
+    text-align: left;
+    margin-left: 4px;
+    letter-spacing: 0.5px;
+}
+
+.team-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    min-width: 110px;
+    max-width: 130px;
+    flex: 1 1 110px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    outline: none;
+}
+
+.team-card:focus-within, .team-card:focus {
+    box-shadow: 0 0 0 3px #b2f7ef, 0 4px 16px rgba(0,0,0,0.20);
+    outline: none;
+    transform: translateY(-2px) scale(1.03);
+}
+
+.team-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.team-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.team-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #b2f7ef;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    text-align: center;
+}
+
+.team-info h3 {
+    margin: 0;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.14);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.team-role {
+    color: #fff;
+    background: #0077cc;
+    font-size: 11px;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 4px 10px;
+    margin: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.09);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+
+.team-role:focus, .team-role:focus-visible {
+    box-shadow: 0 0 0 2px #ffe082;
+    outline: none;
+}
+
+.team-role:hover, .team-role:active {
+    background: #005fa3;
+    color: #ffe082;
+}
+
+@media (max-width: 1000px) {
+    .team-cards {
+        justify-content: center;
+    }
+    
+    .team-card {
+        min-width: 100px;
+        max-width: 120px;
+        flex: 1 1 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-hero {
+        padding: 5px 0;
+    }
+    
+    .about-container {
+        padding: 10px 15px;
+        margin: 0 10px;
+        gap: 12px;
+    }
+    
+    .about-title {
+        font-size: 34px;
+        margin-bottom: 8px !important;
+    }
+    
+    .about-mission {
+        padding: 12px 15px;
+        font-size: 15px;
+        max-width: 100%;
+    }
+    
+    .team-section {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    .team-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    
+    .team-cards {
+        gap: 10px;
+    }
+    
+    .team-card {
+        padding: 6px 8px;
+        min-width: 90px;
+        max-width: 110px;
+        flex: 1 1 90px;
+    }
+    
+    .team-img {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .team-info h3 {
+        font-size: 12px;
+    }
+    
+    .team-role {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        margin: 0 5px;
+        padding: 8px 12px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+    }
+    
+    .about-mission {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .team-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .team-card {
+        max-width: 100%;
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+    
+    .team-card-inner {
+        flex-direction: row;
+        text-align: left;
+        gap: 12px;
+    }
+    
+    .team-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .team-info h3 {
+        text-align: left;
+    }
+    
+    .team-role {
+        align-self: flex-start;
+    }
+}

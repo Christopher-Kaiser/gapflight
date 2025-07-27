@@ -1,6 +1,12 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url('https://cdn.pixabay.com/photo/2017/07/18/17/32/munich-2516492_1280.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 nav {
@@ -14,6 +20,8 @@ nav {
     gap: 12px;
     position: relative;
     z-index: 2;
+    height: 68px;
+    box-sizing: border-box;
 }
 
 nav h1 {
@@ -30,6 +38,8 @@ nav ul {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    width: 300px;
+    justify-content: center;
 }
 
 nav ul li {
@@ -59,6 +69,22 @@ nav ul li a:hover {
     max-width: 400px;
     min-width: 240px;
     height: 36px;
+}
+
+.search-area-placeholder {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 999px;
+    gap: 6px;
+    box-shadow: none;
+    flex: 1;
+    max-width: 400px;
+    min-width: 240px;
+    height: 36px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .search-area input[type="text"] {
@@ -106,16 +132,13 @@ nav ul li a:hover {
 
 .hero {
     position: relative;
-    background-image: url('https://cdn.pixabay.com/photo/2017/07/18/17/32/munich-2516492_1280.jpg');
-    background-size: cover;
-    background-position: center;
     height: 627px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: white;
     text-align: left;
-    padding-left: 120px;
+    padding-left: 160px;
 }
 
 .hero::before {
@@ -249,9 +272,8 @@ nav ul li a:hover {
 
 .social-sidebar {
     position: absolute;
-    top: 61.8%;
+    top: 340px;
     left: 20px;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 15px;
